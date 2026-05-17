@@ -1,7 +1,7 @@
 import food from '../assets/food.png'
-import eleves from '../assets/eleves.png'
-import signal from '../assets/signal.png'
-import maman from '../assets/maman.png'
+import eleves from '../assets/eleves.PNG'
+import signal from '../assets/signal.PNG'
+import maman from '../assets/maman.PNG'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from 'react';

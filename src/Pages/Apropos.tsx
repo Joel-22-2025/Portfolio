@@ -4,7 +4,6 @@ import "aos/dist/aos.css";
 import { useEffect } from 'react';
 
 import photo2 from '../assets/photo2.png'
-import '../app.css';
 const Apropos = () => {
      useEffect(() => {
         AOS.init({
