@@ -46,11 +46,7 @@ const projects = [
   
 ];
 
-const categoryColor: Record<string, { bg: string; text: string }> = {
-  "Web App":   { bg: "bg-blue-500/10",   text: "text-blue-400" },
-  "Full Stack":{ bg: "bg-emerald-500/10", text: "text-emerald-400" },
-  "Interface": { bg: "bg-amber-500/10",   text: "text-amber-400" },
-};
+// categoryColor was removed because it's currently unused. Re-add if you enable the category badge.
 
 const Card = () => {
   useEffect(() => {
@@ -91,7 +87,6 @@ const Card = () => {
         {/* ── Cards grid ── */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {projects.map((project) => {
-            const cat = categoryColor[project.category] ?? { bg: "bg-gray-500/10", text: "text-gray-400" };
             return (
               <div
                 key={project.title}

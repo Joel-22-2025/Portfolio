@@ -21,12 +21,7 @@ const skills = [
   { name: "WordPress",   img: wordpress, level: 75, category: "CMS"       },
 ];
 
-const categoryColor: Record<string, string> = {
-  "Front-end": "#3E6FF4",
-  "Back-end":  "#3E6FF4",
-  "DevOps":    "#1aadcf",
-  "CMS":       "#6b7280",
-};
+// categoryColor was removed because it's currently unused. Re-add if you enable the category badge.
 
 const Competences = () => {
   useEffect(() => {
