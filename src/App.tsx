@@ -7,11 +7,13 @@ import Footer from './Pages/Footer';
 import Contact from './Pages/Contact';
 import Competences from './Pages/Competences';
 import Card from './Pages/Card';
+import { ToastProvider } from './components/ToastProvider';
 
 function App() {
 
-  return (
-    <>
+   return (
+      <ToastProvider>
+      <>
         {/* <button className="btn btn-primary bg-amber-400">DaisyUI OK</button>
         <button className="btn btn-success">Success</button> */}
   
@@ -36,6 +38,7 @@ function App() {
            <section id='footer'>
             <Footer/>
            </section>
+
               
               
                
@@ -54,7 +57,8 @@ function App() {
               <Route path="/Footer" element={<Footer />} />
             </Routes> 
       </BrowserRouter>  */}
-    </>
+      </>
+      </ToastProvider>
   )
 }
 

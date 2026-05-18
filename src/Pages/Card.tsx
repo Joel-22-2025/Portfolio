@@ -1,93 +1,191 @@
-import food from '../assets/food.png'
-import eleves from '../assets/eleves.PNG'
-import signal from '../assets/signal.PNG'
-import maman from '../assets/maman.PNG'
+import food from '../assets/food.png';
+import eleves from '../assets/eleves.PNG';
+import signal from '../assets/signal.PNG';
+import maman from '../assets/maman.PNG';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from 'react';
 
+const projects = [
+  {
+    img: food,
+    title: "Site pour restaurant",
+    description: "Plateforme de commande en ligne 100% fonctionnelle, conçue pour un restaurant local avec une UI moderne et responsive.",
+    link: "https://dayane-food.vercel.app/",
+    tags: ["React", "Vercel"],
+    category: "Web App",
+    delay: 0,
+  },
+  {
+    img: eleves,
+    title: "Gestion des élèves",
+    description: "Application web de gestion scolaire développée avec React et une API Laravel, actuellement en production.",
+    link: "",
+    tags: ["React", "Laravel", "API"],
+    category: "Full Stack",
+    delay: 100,
+  },
+  {
+    img: signal,
+    title: "Application de signalisation",
+    description: "Outil de signalement d'urgences développé avec React, disponible en production sur Vercel.",
+    link: "https://signal-urgente.vercel.app/",
+    tags: ["React", "Firebase"],
+    category: "Web App",
+    delay: 200,
+  },
+  {
+    img: maman,
+    title: "Agenda du médecin",
+    description: "Agenda de gestion de rendez-vous conçu pour une infirmière, réalisé en HTML, CSS et JavaScript vanilla.",
+    link: "https://maman-three.vercel.app/",
+    tags: ["HTML", "CSS", "JS"],
+    category: "Interface",
+    delay: 300,
+  },
+  
+];
+
+const categoryColor: Record<string, { bg: string; text: string }> = {
+  "Web App":   { bg: "bg-blue-500/10",   text: "text-blue-400" },
+  "Full Stack":{ bg: "bg-emerald-500/10", text: "text-emerald-400" },
+  "Interface": { bg: "bg-amber-500/10",   text: "text-amber-400" },
+};
+
 const Card = () => {
-     useEffect(() => {
-            AOS.init({
-                duration: 1000,
-            });
-        }, []);
-    return ( <>
-    {/* <div className="bg-gray-100 w-full min-h-screen gap-4 flex-wrap flex justify-center items-center">
+  useEffect(() => {
+    AOS.init({ duration: 900, once: true });
+  }, []);
 
-        
-        <div className="w-50 p-2 bg-white rounded-xl  hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl">
-             <img className="h-40 object-cover rounded-xl" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="" />
-            <div className="p-2">
-                <h2 className="font-bold text-lg mb-2 ">Heading</h2>
-                <p className="text-sm text-gray-600">Simple Yet Beautiful Card Design with TaiwlindCss. Subscribe to our Youtube channel for more ...</p>
-            </div>
-            <div className="m-2">
-                <a role='button' href='#' className="text-white bg-purple-600 px-3 py-1 rounded-md hover:bg-purple-700">Learn More</a>
-            </div> 
-          
+  return (
+    <section
+      id="projets"
+      className="font-poppins relative min-h-screen bg-gradient-to-br from-[#f0f4ff] via-white to-[#eaf0ff] py-24 px-6 overflow-hidden"
+    >
+      {/* ── Decorative blobs ── */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#3E6FF4]/10 rounded-full blur-3xl pointer-events-none translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#3E6FF4]/10 rounded-full blur-3xl pointer-events-none -translate-x-1/2 translate-y-1/2" />
+
+      <div className="relative max-w-6xl mx-auto">
+
+        {/* ── Header ── */}
+        <div data-aos="fade-down" className="text-center mb-5">
+          <p className="text-[#3E6FF4] font-semibold tracking-[0.25em] uppercase text-xs mb-3">
+            Ce que j'ai construit
+          </p>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-[#0D1730]">
+            Mes Projets
+          </h2>
+          <div className="mt-4 mx-auto w-16 h-1 bg-[#3E6FF4] rounded-full" />
         </div>
 
+        <p
+          data-aos="fade-up"
+          data-aos-delay="100"
+          className="text-center text-gray-500 max-w-xl mx-auto mb-16 text-sm md:text-base leading-relaxed"
+        >
+          Voici une sélection de projets récents — chacun représente un défi concret
+          résolu avec des technologies modernes.
+        </p>
 
-        
-        
-    </div> */}
-    <div className='font-poppins h-min-screen py-20 bg-[#F8FAFC]'>
-        <h1 className='font-bold text-center text-3xl text-blue-700 pb-7 underline' >Mes Projets</h1>
-        <p className='text-center pb-4'>Voici quelques-uns de mes projets récents :</p>
-        <div className=' justify-center items-center flex flex-wrap gap-10'>
-            <div data-aos="fade-right" data-aos-offset="50" data-aos-easing="ease-in-sine"  className='bg-blue-50 w-80 h-105 rounded-2xl shadow-2xl ' >
-                <img className='object-cover' src={food} alt="" />
-                <div className='p-4 justify-center  flex flex-col gap-7'>
-                    <h1 className='font-bold  text-center'>Site pour restaurant</h1>
-                    <p className='text-justify'>Projet 100% fonctionnel actuellement utilisé et disponnible sur https://dayane-food.vercel.app/</p>
-                    <a href="https://dayane-food.vercel.app/" className='py-2 px-3 rounded-xl self-center bg-blue-900 text-blue-50 '>Visiter</a>
+        {/* ── Cards grid ── */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          {projects.map((project) => {
+            const cat = categoryColor[project.category] ?? { bg: "bg-gray-500/10", text: "text-gray-400" };
+            return (
+              <div
+                key={project.title}
+                data-aos="fade-up"
+                data-aos-delay={project.delay}
+                className="group bg-white rounded-3xl shadow-md hover:shadow-2xl hover:-translate-y-2
+                           transition-all duration-400 overflow-hidden border border-gray-100 flex flex-col"
+              >
+                {/* Image */}
+                <div className="relative overflow-hidden h-52">
+                  <img
+                    src={project.img}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  {/* Overlay on hover */}
+                  <div className="absolute inset-0 bg-[#0D1730]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    {project.link && (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-white text-[#0D1730] font-bold text-sm px-5 py-2 rounded-full
+                                   hover:bg-[#3E6FF4] hover:text-white transition-colors duration-200 shadow-lg"
+                      >
+                        Voir le projet →
+                      </a>
+                    )}
+                  </div>
+                  {/* Category badge */}
+                  {/* <span className={`absolute top-3 left-3 text-xs font-bold px-3 py-1 rounded-full backdrop-blur-sm ${cat.bg} ${cat.text} border border-white/20`}>
+                    {project.category}
+                  </span> */}
                 </div>
-            </div>
 
-            <div data-aos="fade-right" data-aos-offset="50" data-aos-easing="ease-in-sine" className='bg-blue-50 w-80 h-105 rounded-2xl shadow-2xl' >
-                <img className='object-cover' src={eleves} alt="" />
-                <div className='p-4 flex flex-col  gap-7'>
-                    <h1 className='font-bold  text-center'>Gestion des élèves</h1>
-                    <p className='text-justify'>Application Web dévellopé avec React & un api Laravel 100% fonctionnel et actuellement utilisé.</p>
-                    <a href="" className=' py-2 px-3 rounded-xl self-center bg-blue-900 text-blue-50'>Visiter</a>
-                </div>
-            </div>
+                {/* Content */}
+                <div className="p-6 flex flex-col gap-3 flex-1">
+                  <h3 className="font-bold text-[#0D1730] text-lg leading-snug">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-500 text-sm leading-relaxed flex-1">
+                    {project.description}
+                  </p>
 
-            <div data-aos="fade-right" data-aos-offset="50" data-aos-easing="ease-in-sine" className='bg-blue-50 w-80 h-105 rounded-2xl shadow-2xl' >
-                <img className='object-cover' src={signal} alt="" />
-                <div className='p-4 flex flex-col gap-4'>
-                    <h1 className='font-bold  text-center'>Application web de signalisation</h1>
-                    <p className='text-justify'>Développé avec react et fontend, cette aplication  elle est actuellement fonctionnel utilisé et disponnible sur https://signal-urgente.vercel.app/</p>
-                    <a href="https://signal-urgente.vercel.app/" className='py-2 px-3 rounded-xl self-center bg-blue-900 text-blue-50'>Visiter</a>
-                </div>
-            </div>
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2 mt-1">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="bg-[#3E6FF4]/8 text-[#3E6FF4] text-xs font-semibold px-3 py-1 rounded-full "
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
 
-            <div data-aos="fade-right" data-aos-offset="50" data-aos-easing="ease-in-sine" className='bg-blue-50 w-80 h-105 rounded-2xl shadow-2xl' >
-                <img className='object-cover' src={maman} alt="" />
-                <div className='p-4 flex flex-col gap-4'>
-                    <h1 className='font-bold  text-center'>Agenda du medecin</h1>
-                    <p className='text-justify'>Conçu pour une infimière et realisé avec Js, html et css, elle fonctionnel et est disponnible sur https://maman-three.vercel.app/</p>
-                    <a href="https://maman-three.vercel.app/" className='py-2 px-3 rounded-xl self-center bg-blue-900 text-blue-50'>Visiter</a>
+                  {/* CTA */}
+                  {project.link ? (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-3 self-start inline-flex items-center gap-2 text-sm font-semibold text-[#3E6FF4]
+                                 hover:text-[#0D1730] transition-colors duration-200 group/link"
+                    >
+                      Visiter le site
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="w-4 h-4 group-hover/link:translate-x-1 transition-transform"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </a>
+                  ) : (
+                    <span className="mt-3 self-start text-xs text-gray-400 italic">
+                      Accès privé / en production
+                    </span>
+                  )}
                 </div>
-            </div>
-            <div data-aos="fade-right" data-aos-offset="50" data-aos-easing="ease-in-sine" className='bg-blue-50 w-80 h-105 rounded-2xl shadow-2xl' >
-                <img className='object-cover' src={food} alt="" />
-                <div className='p-4 flex flex-col gap-7'>
-                    <h1 className='font-bold  text-center'>Site pour restaurant</h1>
-                    <p className='text-justify'>Projet 100% fonctionnel actuellement utilisé et disponnible sur https://dayane-food.vercel.app/</p>
-                    <a href="https://dayane-food.vercel.app/" className='py-2 px-3 rounded-xl self-center bg-blue-900 text-blue-50'>Visiter</a>
-                </div>
-            </div>
+              </div>
+            );
+          })}
         </div>
-    </div>
-    
 
+        {/* ── Bottom note ── */}
+        <div data-aos="fade-up" data-aos-delay="300" className="mt-16 text-center">
+          <p className="text-gray-400 text-sm">
+            D'autres projets sont en cours de développement...
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+};
 
-
-
-
-    </> );
-}
- 
 export default Card;
