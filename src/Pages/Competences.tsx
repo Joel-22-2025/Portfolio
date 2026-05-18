@@ -19,7 +19,7 @@ const Competences = () => {
     return ( 
     <>
         {/* <div className="flex flex-col justify-center  h-screen flex-wrap-reverse bg-amber-100 '  "> */}
-        <div className=" justify-center  min-h-screen flex-wrap-reverse">
+        <div className="font-poppins justify-center  min-h-screen flex-wrap-reverse">
 
             <h1 className="text-center font-bold pt-10 text-3xl text-blue-700 underline ">Compétences</h1>
             

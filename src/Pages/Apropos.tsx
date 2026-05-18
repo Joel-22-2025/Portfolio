@@ -12,7 +12,7 @@ const Apropos = () => {
     }, []);
     return ( 
     <>
-        <div className="flex flex-col justify-center  min-h-screen flex-wrap-reverse bg-[#FFFFFFB3] py-20  ">
+        <div className="font-poppins flex flex-col justify-center  min-h-screen flex-wrap-reverse bg-[#FFFFFFB3] py-20  ">
             <h1 className="text-center font-bold text-3xl text-[#3E6FF4] pb-15 underline ">À propos</h1>
 {/* 
             <div className=' flex flex-col justify-center items-c   enter md:mt-20 '> */}
@@ -22,8 +22,8 @@ const Apropos = () => {
                         <img src={photo2} alt="" className='w-60 md:w-100 rounded-2xl border-4 border-[#3E6FF4]' />
                     </div>
                     <div data-aos="fade-up" className='flex flex-col justify-center text-center'  >
-                        <h1 className='font-bold py-5 text-2xl'>Qui suis-je ?</h1>
-                        <p className='w-90 md:w-120 sm:w-90 text-justify px-4'>
+                        <h1 className='font-bold py-5 text-2xl '>Qui suis-je ?</h1>
+                        <p className=' w-90 md:w-120 sm:w-90 text-justify px-4  '>
 
                             Je suis un développeur web et mobile passionné par la création d’applications modernes, performantes et intuitives. Curieux et constamment en quête d’apprentissage, j’aime transformer des idées en solutions concrètes à travers le code.
 

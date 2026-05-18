@@ -32,7 +32,7 @@ const Card = () => {
         
         
     </div> */}
-    <div className=' h-min-screen py-20 bg-[#F8FAFC]'>
+    <div className='font-poppins h-min-screen py-20 bg-[#F8FAFC]'>
         <h1 className='font-bold text-center text-3xl text-blue-700 pb-7 underline' >Mes Projets</h1>
         <p className='text-center pb-4'>Voici quelques-uns de mes projets récents :</p>
         <div className=' justify-center items-center flex flex-wrap gap-10'>

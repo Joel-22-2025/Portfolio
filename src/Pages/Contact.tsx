@@ -14,7 +14,7 @@ const Contact = () => {
     }, []);
     return ( <>
 
-        <div className="min-h-screen  justify-center py-10 pt-25 ">
+        <div className=" font-poppins min-h-screen  justify-center py-10 pt-25 ">
             <h1 className="text-center font-bold text-3xl text-blue-700 underline ">Contacts</h1>
 
             <div className="flex flex-col md:flex-row justify-center items-center">
