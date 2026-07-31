@@ -91,7 +91,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="font-poppins relative min-h-screen bg-[#0D1730] py-24 px-6 overflow-hidden"
+      className="font-poppins relative min-h-screen bg-[#0D1730] py-24 px-6 overflow-hidden rounded-br-[100px] rounded-bl-[100px] md:rounded-br-[80px] md:rounded-bl-[80px]"
     >
       {/* ── Background decoration ── */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">

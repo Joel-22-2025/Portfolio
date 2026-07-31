@@ -11,7 +11,7 @@ const Apropos = () => {
   return (
     <section
       id="apropos"
-      className="font-poppins relative min-h-screen bg-gradient-to-br from-[#f0f4ff] via-white to-[#e8eeff] py-24 px-6 overflow-hidden"
+      className="relative z-10 font-poppins min-h-screen bg-gradient-to-br from-[#f0f4ff] via-white to-[#e8eeff] py-24 px-6 overflow-hidden"
     >
       {/* Decorative background blobs */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-[#3E6FF4]/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 pointer-events-none" />

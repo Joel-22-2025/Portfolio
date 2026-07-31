@@ -2,6 +2,7 @@ import food from '../assets/food.png';
 import eleves from '../assets/eleves.PNG';
 import signal from '../assets/signal.PNG';
 import maman from '../assets/maman.PNG';
+import contact from '../assets/contact.png';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from 'react';
@@ -12,7 +13,7 @@ const projects = [
     title: "Site pour restaurant",
     description: "Plateforme de commande en ligne 100% fonctionnelle, conçue pour un restaurant local avec une UI moderne et responsive.",
     link: "https://dayane-food.vercel.app/",
-    tags: ["React", "Vercel"],
+    tags: ["HTML","CSS","JavaScript", "Vercel"],
     category: "Web App",
     delay: 0,
   },
@@ -30,15 +31,24 @@ const projects = [
     title: "Application de signalisation",
     description: "Outil de signalement d'urgences développé avec React, disponible en production sur Vercel.",
     link: "https://signal-urgente.vercel.app/",
-    tags: ["React", "Firebase"],
+    tags: ["React", "Firebase", "Tailwind CSS"],
     category: "Web App",
     delay: 200,
   },
   {
     img: maman,
     title: "Agenda du médecin",
-    description: "Agenda de gestion de rendez-vous conçu pour une infirmière, réalisé en HTML, CSS et JavaScript vanilla.",
+    description: "Agenda de gestion de rendez-vous conçu pour une infirmière, réalisé en HTML, CSS et JavaScript.",
     link: "https://maman-three.vercel.app/",
+    tags: ["HTML", "CSS", "JS"],
+    category: "Interface",
+    delay: 300,
+  },
+  {
+    img: contact,
+    title: "Gestion de contacts",
+    description: "Application de gestion de contacts réalisée ave NEXT.js, offrant une interface moderne et réactive pour la gestion des informations personnelles.",
+    link: "https://contact-book-bodjrenou-joels-projects.vercel.app/",
     tags: ["HTML", "CSS", "JS"],
     category: "Interface",
     delay: 300,
@@ -56,7 +66,7 @@ const Card = () => {
   return (
     <section
       id="projets"
-      className="font-poppins relative min-h-screen bg-gradient-to-br from-[#f0f4ff] via-white to-[#eaf0ff] py-24 px-6 overflow-hidden"
+      className="relative z-10 font-poppins relative min-h-screen bg-gradient-to-br from-[#f0f4ff] via-white to-[#eaf0ff] py-24 px-6 overflow-hidden"
     >
       {/* ── Decorative blobs ── */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#3E6FF4]/10 rounded-full blur-3xl pointer-events-none translate-x-1/2 -translate-y-1/2" />
@@ -85,7 +95,7 @@ const Card = () => {
         </p>
 
         {/* ── Cards grid ── */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {projects.map((project) => {
             return (
               <div

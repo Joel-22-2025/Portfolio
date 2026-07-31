@@ -1,29 +1,38 @@
 import photo from '../assets/photo.png'
+import { Typewriter } from "react-simple-typewriter";
 
 
 const Accueil = () => {
     return ( 
         <>
-            <div className='font-poppins  flex justify-center  min-h-screen flex-wrap bg-[#F8FAFC] py-10' >
+            <div className='relative z-10 font-poppins  flex justify-center  min-h-screen flex-wrap bg-[#F8FAFC] py-10' >
                 <div className="flex flex-col-reverse md:flex-row w-full gap-10 items-center max-w-6xl md:gap-50" >
                     <div className="text-center md:text-left">
-                    <h1 className="font-bold text-2xl sm:text-3xl md:text-5xl">
-                        BIENVENUE SUR MON <br />
-                        <span
+                    <h1 className="font-extrabold font-poppins text-3xl sm:text-4xl md:text-5xl tracking-tight leading-tight">
+                    BIENVENUE SUR MON <br />
+                    <span
                         data-aos="fade-down"
                         data-aos-easing="linear"
                         data-aos-duration="1500"
-                        className="text-blue-700"
+                        className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 bg-clip-text text-transparent drop-shadow-lg"
                         >
-                        PORTFOLIO
-                        </span>{" "}
-                        🎉
+                        <Typewriter
+                            words={["PORTFOLIO"]}
+                            loop={false}
+                            cursor
+                            cursorStyle="_"
+                            typeSpeed={100}
+                            deleteSpeed={50}
+                            delaySpeed={1000}
+                        />
+                    </span>
+                    <span className="inline-block animate-bounce">🎉</span>
                     </h1>
 
-                    <p className="text-base sm:text-lg md:text-xl my-5">
-                        Je suis un développeur passionné par la création d'applications <br /> web
-                        innovantes.
+                    <p className="font-inter text-base sm:text-lg md:text-xl my-6 text-gray-700 max-w-xl">
+                    Je suis un développeur passionné par la création d'applications  web innovantes.
                     </p>
+
 
                     <a
                         href="#contact"

@@ -113,7 +113,10 @@ const Navbar = () => {
                             <li>
                                 <a
                                     href="#accueil"
-                                    onClick={() => setActiveSection('accueil')}
+                                    onClick={() => {
+                                        setActiveSection('accueil');
+                                        setOpen(false);
+                                    }}
                                     className={linkClass('accueil')}
                                 >
                                     Accueil
@@ -123,7 +126,10 @@ const Navbar = () => {
                             <li>
                                 <a
                                     href="#apropos"
-                                    onClick={() => setActiveSection('apropos')}
+                                    onClick={() => {
+                                        setActiveSection('apropos');
+                                        setOpen(false);
+                                    }}
                                     className={linkClass('apropos')}
                                 >
                                     À propos
@@ -133,7 +139,10 @@ const Navbar = () => {
                             <li>
                                 <a
                                     href="#competences"
-                                    onClick={() => setActiveSection('competences')}
+                                    onClick={() => {
+                                        setActiveSection('competences');
+                                        setOpen(false);
+                                    }}
                                     className={linkClass('competences')}
                                 >
                                     Compétences
@@ -143,7 +152,10 @@ const Navbar = () => {
                             <li>
                                 <a
                                     href="#projets"
-                                    onClick={() => setActiveSection('projets')}
+                                    onClick={() => {
+                                        setActiveSection('projets');
+                                        setOpen(false);
+                                    }}
                                     className={linkClass('projets')}
                                 >
                                     Projet
@@ -153,7 +165,10 @@ const Navbar = () => {
                             <li>
                                 <a
                                     href="#contact"
-                                    onClick={() => setActiveSection('contact')}
+                                    onClick={() => {
+                                        setActiveSection('contact');
+                                        setOpen(false);
+                                    }}
                                     className={linkClass('contact')}
                                 >
                                     Contact
@@ -173,3 +188,12 @@ export default Navbar;
 
 
 
+// quelle sont les commandes pour installer ts particule v4
+
+// + Thought: 1.3s
+
+// npm install @tsparticles/react @tsparticles/slim
+
+// Pour une installation plus complète (avec tous les plugins) :
+
+// npm install @tsparticles/react @tsparticles/full
