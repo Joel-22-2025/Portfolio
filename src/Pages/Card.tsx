@@ -38,7 +38,7 @@ const projects = [
   {
     img: maman,
     title: "Agenda du médecin",
-    description: "Agenda de gestion de rendez-vous conçu pour une infirmière, réalisé en HTML, CSS et JavaScript.",
+    description: "Agenda pour connaitre les jours libres ainsi que les jours de travail des médecins a partir de leurs ordres de services.",
     link: "https://planning-liard-rho.vercel.app/",
     tags: ["Next.js", "Tailwind CSS", "PWA"],
     category: "Interface",
@@ -49,7 +49,7 @@ const projects = [
     title: "Gestion de contacts",
     description: "Application de gestion de contacts réalisée ave NEXT.js, offrant une interface moderne et réactive pour la gestion des informations personnelles.",
     link: "https://contact-book-bodjrenou-joels-projects.vercel.app/",
-    tags: ["HTML", "CSS", "JS"],
+    tags: ["Next.js", "Tailwind CSS", "Vercel"],
     category: "Interface",
     delay: 300,
   },
